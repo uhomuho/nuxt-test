@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     hasEmpty() {
-      let check = Object.keys(this.slide).map(item => item && item !== null && item.length > 0 ? true : false)
+      let check = Object.keys(this.slide).map(prop => this.slide[prop] && this.slide[prop] !== null && this.slide[prop].length > 0 ? true : false)
       return check.filter(item => item == false).length > 0
     }
   },
